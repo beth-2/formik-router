@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Bar from "./components/bar/Bar";
+import { BrowserRouter, Route, Link, } from 'react-router-dom'
+import FormikYup from './components/formik/FormikYup'
+import Home from './components/formik/Home'
+import { Nav, Nv } from './components/formik/Style.style'
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <BrowserRouter>
+      <Nav>
+        <Link to='/login' >
+      <Toolbar>
+          <Button color="inherit">Login</Button>
+      </Toolbar>
+      </Link>
+      </Nav> 
+      <Nv>
+      <Link to='/Home' >
+        <Toolbar>
+          <Button color="inherit">Home</Button>
+      </Toolbar>
+      </Link>
+      </Nv>
+        
+      
+       <Route path='/login' component={FormikYup} />
+       <Route path='/home' component={Home} />
+      </BrowserRouter>  
+      <Bar />
     </div>
   );
-}
+};
 
 export default App;

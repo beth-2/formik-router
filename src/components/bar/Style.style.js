@@ -1,0 +1,48 @@
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  background-color: #808080;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+`
+
+export const Location = styled.div`
+  background-color: #212121 ;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 130px;
+  height: 446px;
+  z-index: 0;
+`
+
+export const Image = styled.img`
+  position: absolute;
+  left: 25px;
+  top: 90px;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  border-radius: 50%;
+`
+
+export const AppBar = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 65px;
+  background-color: #90caf9;
+`
+
+export const Name = styled.p`
+  font-family: 'Mouse Memoirs', sans-serif;
+  position: absolute;
+  left: 20px;
+  top: 150px;
+  font-size: 35px;
+`
