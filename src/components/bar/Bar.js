@@ -1,6 +1,6 @@
 import React from "react";
 import faker from "faker";
-import { Container, Location, Image, AppBar, Svg, Name } from "./Style.style";
+import { Container, Location, Image, AppBar, Name } from "./Style.style";
 
 function Bar() {
   return (

@@ -13,7 +13,7 @@ const FormikYup = () => {
        initialValues={{
          name: '',
          email: '',
-         agree: '',
+         agree: false,
        }}
 
        validationSchema={
@@ -26,7 +26,7 @@ const FormikYup = () => {
        onSubmit={(values, { resetForm, setSubmitting }) =>{
         console.log(values);
         setTimeout(() => {
-          setSubmitting(false)
+          setSubmitting()
           resetForm();
         }, 2000);
       }}
@@ -35,7 +35,6 @@ const FormikYup = () => {
           ({values,
             errors, 
             handleSubmit, 
-            handleReset, 
             handleChange, 
             handleBlur,
             dirty,
@@ -80,6 +79,7 @@ const FormikYup = () => {
               <br/>
 
               <Checkbox
+              type='checkbox'
               onChange={handleChange}
               id='agree'
               value={values.agree}

@@ -20,7 +20,7 @@ const App = () => {
       </Link>
       </Nav> 
       <Nv>
-      <Link to='/Home' >
+      <Link to='/home' >
         <Toolbar>
           <Button color="inherit">Home</Button>
       </Toolbar>
